@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Age Rock Station</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #101010;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid;
+            border-image: linear-gradient(to right, red, yellow, green, cyan, blue, magenta, red) 1;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .content {
+            flex: 1;
+            max-width: 60%; /* Ajuste de largura para manter proporcional */
+            padding: 20px;
+            text-align: center;
+            background-color: #1a1a1a;
+            border: 2px solid;
+            border-image: linear-gradient(to right, red, yellow, green, cyan, blue, magenta, red) 1;
+            border-radius: 10px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 10px;
+        }
+
+        .sidebar {
+            width: 20%; /* Ajustando a largura das colunas de anúncio */
+            padding: 20px;
+            text-align: center;
+            background-color: #111;
+            color: #fff;
+            border: 2px solid;
+            border-image: linear-gradient(to right, red, yellow, green, cyan, blue, magenta, red) 1;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        footer {
+            clear: both; /* Garante que o footer fique abaixo dos elementos flutuantes */
+            margin-top: 20px;
+            background-color: #101010;
+            color: #888;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .visitor-counter {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1a1a1a;
+            color: #ffd700;
+            padding: 10px;
+            border: 2px solid #ffd700;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 90%;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                max-width: 90%;
+            }
+
+            .sidebar {
+                width: 90%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="ga1.png" alt="Golden Age RockStation Logo">
+    </header>
+    <main>
+        <div class="sidebar">
+            <h3>ANUNCIE AQUI</h3>
+        </div>
+        <div class="content">
+            <h1>Bem-vindos!</h1>
+            <p>Apertem o play para curtir o melhor do Classic Rock Internacional!</p>
+            <div class="player">
+                <audio controls>
+                    <source src="https://stream-172.zeno.fm/jszeqtxjeyluv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJqc3plcXR4amV5bHV2IiwiaG9zdCI6InN0cmVhbS0xNzIuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IjFldUVPZThMUWFPb09ZbFBFMXV4eGciLCJpYXQiOjE3MzYxODk2MzksImV4cCI6MTczNjE4OTY5OX0.Hp9CQFtNKbzHrVKXdMrioEdPyZJCiE8tnbn9WYi9meA" type="audio/mpeg">
+                    Seu navegador não suporta o player de áudio.
+                </audio>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h3>ANUNCIE AQUI</h3>
+        </div>
+    </main>
+    <footer>
+        <div class="visitor-counter">
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=0df81245c22bca3916f43eb276d53dbb0d321154"></script>
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1215886/t/5"></script>
+        </div>
+        <p>Desenvolvido por Golden Age RockStation.</p>
+    </footer>
+</body>
+</html>
