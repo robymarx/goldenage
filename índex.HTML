@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Age Rock Station</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-            color: #f0f0f0;
+            background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+            color: #333;
             overflow-x: hidden;
         }
 
         header {
-            background: #101010;
+            background: #f0f0f0;
             text-align: center;
             padding: 20px;
             border-bottom: 2px solid;
-            border-image: linear-gradient(to right, red, yellow, green, cyan, blue, magenta, red) 1;
+            border-image: linear-gradient(to right, #4a90e2, #50c878) 1;
         }
 
         header img {
@@ -28,47 +29,56 @@
 
         main {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
             margin: 20px;
         }
 
         .content {
             flex: 1;
-            max-width: 60%; /* Ajuste de largura para manter proporcional */
+            min-width: 300px;
             padding: 20px;
             text-align: center;
-            background-color: #1a1a1a;
+            background-color: #ffffff;
             border: 2px solid;
-            border-image: linear-gradient(to right, red, yellow, green, cyan, blue, magenta, red) 1;
+            border-image: linear-gradient(to right, #4a90e2, #50c878) 1;
             border-radius: 10px;
             font-family: 'Comic Sans MS', cursive, sans-serif;
             margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar {
-            width: 20%; /* Ajustando a largura das colunas de anúncio */
+            flex: 0.3;
+            min-width: 150px;
             padding: 20px;
             text-align: center;
-            background-color: #111;
-            color: #fff;
+            background-color: #f8f8f8;
+            color: #333;
             border: 2px solid;
-            border-image: linear-gradient(to right, red, yellow, green, cyan, blue, magenta, red) 1;
+            border-image: linear-gradient(to right, #4a90e2, #50c878) 1;
             border-radius: 10px;
             margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            margin: 0;
+            font-size: 16px;
         }
 
         footer {
-            clear: both; /* Garante que o footer fique abaixo dos elementos flutuantes */
             margin-top: 20px;
-            background-color: #101010;
-            color: #888;
+            background-color: #f0f0f0;
+            color: #555;
             text-align: center;
             padding: 10px;
             position: relative;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
 
         footer a {
-            color: #ffd700;
+            color: #4a90e2;
             text-decoration: none;
         }
 
@@ -81,14 +91,15 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #1a1a1a;
-            color: #ffd700;
+            background-color: #ffffff;
+            color: #4a90e2;
             padding: 10px;
-            border: 2px solid #ffd700;
+            border: 2px solid #4a90e2;
             border-radius: 5px;
             font-size: 14px;
             width: 90%;
             max-width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -97,14 +108,21 @@
                 align-items: center;
             }
 
-            .content {
-                max-width: 90%;
-            }
-
             .sidebar {
                 width: 90%;
-                margin: 10px 0;
+                min-width: 0;
             }
+
+            .content {
+                width: 90%;
+                min-width: 0;
+            }
+        }
+
+        /* Remove any references to -ms-high-contrast-adjust */
+        .high-contrast {
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
@@ -119,12 +137,16 @@
         <div class="content">
             <h1>Bem-vindos!</h1>
             <p>Apertem o play para curtir o melhor do Classic Rock Internacional!</p>
-            <div class="player">
-                <audio controls>
-                    <source src="https://stream-172.zeno.fm/jszeqtxjeyluv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJqc3plcXR4amV5bHV2IiwiaG9zdCI6InN0cmVhbS0xNzIuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6IjFldUVPZThMUWFPb09ZbFBFMXV4eGciLCJpYXQiOjE3MzYxODk2MzksImV4cCI6MTczNjE4OTY5OX0.Hp9CQFtNKbzHrVKXdMrioEdPyZJCiE8tnbn9WYi9meA" type="audio/mpeg">
-                    Seu navegador não suporta o player de áudio.
-                </audio>
-            </div>
+            <!-- Player embed iframe -->
+            <iframe src="https://zeno.fm/player/golden-age-rockstation" 
+                width="575" 
+                height="250" 
+                frameborder="0" 
+                scrolling="no">
+            </iframe>
+            <a href="https://zeno.fm/" target="_blank" style="display: block; font-size: 0.9em; line-height: 10px;">
+                A Zeno.FM Station
+            </a>
         </div>
         <div class="sidebar">
             <h3>ANUNCIE AQUI</h3>
